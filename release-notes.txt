@@ -1,0 +1,5 @@
+# v1.0.0 June 15, 2016
+- first release
+- ability to set the y-axis scale position for all visible tracks
+- dialog box is found in the "View" menu item
+- choose between "left", "center" [default], "right", or "none"

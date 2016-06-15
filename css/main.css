@@ -1,0 +1,7 @@
+/* CSS file for YScaleMenuPlugin */
+
+.yScaleIcon{
+    background-image: url('../img/y-scale.png');
+    width: 16px;
+    height: 16px;
+}
