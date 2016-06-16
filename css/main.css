@@ -5,3 +5,12 @@
     width: 16px;
     height: 16px;
 }
+
+.y-scale-dialog-td-key{
+    font-weight: bold;
+    padding-right:5px;
+}
+
+.yscale-dialog-td-button label{
+    padding: 0px 5px 0px 1px;
+}
