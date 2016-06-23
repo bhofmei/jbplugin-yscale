@@ -1,3 +1,6 @@
+# v1.0.1 June 15, 2016
+- added CSS formating to dialog box
+
 # v1.0.0 June 15, 2016
 - first release
 - ability to set the y-axis scale position for all visible tracks
