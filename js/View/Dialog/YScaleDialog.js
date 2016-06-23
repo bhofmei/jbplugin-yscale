@@ -47,7 +47,6 @@ return declare (ActionBarDialog,{
         var ok_button = new Button({
         label: "Apply",
         onClick: dojo.hitch( this, function() {
-            console.log(this.registerClicks);
             array.forEach(dialog.visibleTracks,function(track){
                 if(dialog.registerClicks[track.config.label] !== null){
                     track.config.yScalePosition = dialog.registerClicks[track.config.label];
