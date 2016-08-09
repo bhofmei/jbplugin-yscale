@@ -80,6 +80,7 @@ return declare( JBrowsePlugin,
             }));
         });
         }   // end browser.config.show_nav
+        // 
     } // end constructor
 });
 });
