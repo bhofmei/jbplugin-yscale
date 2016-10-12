@@ -20,4 +20,6 @@ If that doesn't work, add this to jbrowse_conf.json:
     }``
     
 ##Use
-Open the dialog box by selecting "Set y-scale position" in the **View** menu. All visible tracks will be displayed as a row with the current configuration checked. Simply toggle the radio buttons for tracks you wish to change and click "Apply".
+Open the dialog box by selecting "Set y-scale position" in the **View** menu. All visible tracks (except sequence tracks) will be displayed as a row with the current configuration checked. Simply toggle the radio buttons for tracks you wish to change and click "Apply".
+
+You can also change the position for all tracks using the checkboxes in the top row. If a checkbox is deselected (ie was checked and clicked to uncheck), y-scale position defaults to "center". 
