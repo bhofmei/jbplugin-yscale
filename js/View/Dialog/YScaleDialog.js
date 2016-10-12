@@ -27,7 +27,9 @@ return declare (ActionBarDialog,{
 
     constructor: function( args ){
         this.browser = args.browser;
-        this.visibleTracks = this.browser.view.visibleTracks();
+        this.visibleTracks = array.filter(this.browser.view.visibleTracks(), function(track){
+            return !( (/Sequence$/.test(track.config.type)) || (/Sequence$/.test(track.config.trackType)) )
+        });
         this.countClicks = {'left':0, 'center':0, 'right':0, 'none': 0};
         this.storeClicks = {};
         this.registerClicks = this._initializeLocations();
