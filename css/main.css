@@ -5,12 +5,31 @@
     width: 16px;
     height: 16px;
 }
-
+#y-scale-dialog-main{
+    border-collapse: collapse;
+}
 .y-scale-dialog-td-key{
     font-weight: bold;
     padding-right:5px;
+}
+tr#y-scale-dialog-row-boxes td.y-scale-dialog-td-key{
+    font-style: italic;
+}
+tr#y-scale-dialog-row-boxes td{
+    border-bottom: solid 1px black;
 }
 
 .yscale-dialog-td-button label{
     padding: 0px 5px 0px 1px;
 }
+
+.yscale-checkbox{
+    background-image: url(../img/checkmark-indeterminate.png)!important;
+}
+.yscale-checkbox.indeterminate.dijitCheckBox{
+    background-position:-192px;
+}
+.yscale-checkbox.indeterminate.dijitCheckBox.dijitCheckBoxHover{
+    background-position:-224px;
+}
+
