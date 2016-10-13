@@ -14,7 +14,7 @@ downloaded the latest release version at [releases](https://github.com/bhofmei/j
 Unzip the downloaded folder, place in _JBrowse/plugins_, and rename the folder _YScaleMenuPlugin_
 
 ##Activate
-Add this to _jbrowse.conf_:
+Add this to _jbrowse.conf_ under `[GENERAL]`:
 
     [ plugins.YScaleMenuPlugin]
     location = plugins/YScaleMenuPlugin
