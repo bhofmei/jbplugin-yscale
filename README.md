@@ -8,16 +8,22 @@ This plugin allows the user to set the position of the y-axis scale for all visi
 For JBrowse 1.11.6+ in the _JBrowse/plugins_ folder, type:  
 ``git clone https://github.com/bhofmei/jbplugin-yscale.git YScaleMenuPlugin``
 
-##Activate
-Add this to jbrowse.conf:
-    ``"plugins": [
-        'YScaleMenuPlugin'
-    ],``
+**or**
 
-If that doesn't work, add this to jbrowse_conf.json:
-    ``"plugins" : {
+downloaded the latest release version at [releases](https://github.com/bhofmei/jbplugin-yscale/releases).  
+Unzip the downloaded folder, place in _JBrowse/plugins_, and rename the folder _YScaleMenuPlugin_
+
+##Activate
+Add this to _jbrowse.conf_:
+
+    [ plugins.YScaleMenuPlugin]
+    location = plugins/YScaleMenuPlugin
+
+If that doesn't work, add this to _jbrowse_conf.json_:
+
+    "plugins" : {
         "YScaleMenuPlugin" : { "location" : "plugins/YScaleMenuPlugin" }
-    }``
+    }
     
 ##Use
 Open the dialog box by selecting "Set y-scale position" in the **View** menu. All visible tracks (except sequence tracks) will be displayed as a row with the current configuration checked. Simply toggle the radio buttons for tracks you wish to change and click "Apply".
