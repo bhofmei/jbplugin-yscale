@@ -1,0 +1,22 @@
+{
+  "name": "YScaleMenuPlugin",
+  "version": "1.1.0",
+  "description": " Adds global menu option to set the y-scale position of all visible tracks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhofmei/jbplugin-yscale.git"
+  },
+  "keywords": [
+    "JBrowse"
+  ],
+  "author": "Brigitte Hofmeister",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhofmei/jbplugin-yscale/issues"
+  },
+  "homepage": "https://github.com/bhofmei/jbplugin-yscale#readme"
+}
