@@ -1,11 +1,15 @@
-#v1.1.0 Oct 12, 2016
+Release Notes
+# v1.1.1 Aug 11, 2017
+- updates to documentation
+
+# v1.1.0 Oct 12, 2016
 - in dialog box, set y-scale position for all tracks
 - if checkbox deselected, defaults to "center"
 
-# v1.0.1 June 15, 2016
+# v1.0.1 Jun 15, 2016
 - added CSS formating to dialog box
 
-# v1.0.0 June 15, 2016
+# v1.0.0 Jun 15, 2016
 - first release
 - ability to set the y-axis scale position for all visible tracks
 - dialog box is found in the "View" menu item
