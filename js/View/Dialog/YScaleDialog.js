@@ -110,18 +110,19 @@ return declare (ActionBarDialog,{
             dom.create('td',{innerHTML:track.config.key,class:'y-scale-dialog-td-key'}, tableRow);
             /*var curPos = (track.config.yScalePosition === undefined ? 'center' : track.config.yScalePosition);*/
             var curPos = dialog.storeClicks[trackLabel];
+          var formattedLabel = trackLabel.replace(/\./g, '-');
             array.forEach(locationList, function(loc){
                 var button = new dijitRadioButton({
-                   name:'yscale-'+trackLabel,
+                   name:'yscale-'+formattedLabel,
                     checked: loc === curPos,
-                    id:'yscale-dialog-radio-'+trackLabel+'-'+loc,
+                    id:'yscale-dialog-radio-'+formattedLabel+'-'+loc,
                     value: loc,
                     _label: trackLabel
                 });
                 button.onClick = dojo.hitch(dialog, '_registerClick', button);
                 var td = dom.create('td',{class:'yscale-dialog-td-button'},tableRow);
                 button.placeAt(td,'first');
-                dom.create('label',{"for":'yscale-dialog-radio-'+trackLabel+'-'+loc, innerHTML: loc}, td);
+                dom.create('label',{"for":'yscale-dialog-radio-'+formattedLabel+'-'+loc, innerHTML: loc}, td);
             });
         });
 
@@ -149,6 +150,7 @@ return declare (ActionBarDialog,{
         array.forEach(thisB.visibleTracks, function(track){
            var newVal = (box.checked? box.value : 'center');
             var label = track.config.label;
+          var formattedLabel = label.replace(/\./g, '-');
             var oldVal = (thisB.registerClicks[label] === null ? track.config.yScalePosition : thisB.registerClicks[label]);
             oldVal = (oldVal === undefined ? 'center' : oldVal);
             // update
@@ -156,7 +158,7 @@ return declare (ActionBarDialog,{
             thisB.countClicks[oldVal] -=1;
             thisB.registerClicks[label] = newVal;
             thisB.storeClicks[label] = newVal;
-            var button = registry.byId('yscale-dialog-radio-'+label+'-'+(newVal===undefined ? 'center' : newVal));
+            var button = registry.byId('yscale-dialog-radio-'+formattedLabel+'-'+(newVal===undefined ? 'center' : newVal));
             if(button)
                 button.set('checked',true);
         });
