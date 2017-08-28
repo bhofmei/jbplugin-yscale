@@ -1,6 +1,6 @@
 {
   "name": "jbplugin-yscale",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": " Adds global menu option to set the y-scale position of all visible tracks",
   "main": "index.js",
   "scripts": {

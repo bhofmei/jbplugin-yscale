@@ -1,27 +1,4 @@
-require({cache:{
-'JBrowse/Plugin':function(){
-define("JBrowse/Plugin", [
-           'dojo/_base/declare',
-           'JBrowse/Component'
-       ],
-       function( declare, Component ) {
-return declare( Component,
-{
-    constructor: function( args ) {
-        this.name = args.name;
-        this.cssLoaded = args.cssLoaded;
-        this._finalizeConfig( args.config );
-    },
-
-    _defaultConfig: function() {
-        return {
-            baseUrl: '/plugins/'+this.name
-        };
-    }
-});
-});
-}}});
-define('YScaleMenuPlugin/main',[ 
+define('YScaleMenuPlugin/main', [
     'dojo/_base/declare',
     'dojo/_base/array',
     'dojo/_base/lang',
@@ -39,7 +16,7 @@ define('YScaleMenuPlugin/main',[
     "JBrowse/Browser",
     'YScaleMenuPlugin/View/Dialog/YScaleDialog'
 ],
-function(
+  function (
     declare,
     array,
     lang,
@@ -56,31 +33,32 @@ function(
     dijitMenuItem,
     Browser,
     YScaleDialog
-){
- 
-return declare( JBrowsePlugin,
-{
-    constructor: function( args ) { 
+  ) {
+
+    return declare(JBrowsePlugin, {
+      constructor: function (args) {
         var baseUrl = this._defaultConfig().baseUrl;
+        this.config.version = '1.1.2';
+        console.log("YScaleMenuPlugin plugin starting - v", this.config.version);
         var thisB = this;
         var browser = this.browser;
-        if(browser.config.show_nav){
-        browser.afterMilestone('initView',  function() {
-        browser.addGlobalMenuItem( 'view', new dijitMenuItem({
-                label: 'Set y-scale position',
-                iconClass: 'yScaleIcon',
-                id: 'menubar_yscale',
-                title: 'Set location of y-axis scale for visible tracks',
-                onClick: function() {
-                    new YScaleDialog({
-                        height: 50,
-                        browser: browser
-                    }).show();
-                }
+        if (browser.config.show_nav) {
+          browser.afterMilestone('initView', function () {
+            browser.addGlobalMenuItem('view', new dijitMenuItem({
+              label: 'Set y-scale position',
+              iconClass: 'yScaleIcon',
+              id: 'menubar_yscale',
+              title: 'Set location of y-axis scale for visible tracks',
+              onClick: function () {
+                new YScaleDialog({
+                  height: 50,
+                  browser: browser
+                }).show();
+              }
             }));
-        });
-        }   // end browser.config.show_nav
+          });
+        } // end browser.config.show_nav
         // 
-    } // end constructor
-});
-});
+      } // end constructor
+    });
+  });
