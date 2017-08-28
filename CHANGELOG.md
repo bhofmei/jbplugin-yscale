@@ -4,6 +4,7 @@
 
 # [v1.1.2] - 2017-08-28
 - FIXED issue when "." in track label
+- ADDED ability to set same y-scale position for all tracks
 
 # [v1.1.1] - 2017-08-11
 - updates to documentation
